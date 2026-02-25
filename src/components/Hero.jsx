@@ -8,7 +8,7 @@ function Hero() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-black tracking-tight mb-6 leading-tight">
           안정적인 서비스와 <br className="hidden sm:block" />
           AI 기술을 연결하는 개발자, <br />
-          이상혁입니다.
+          표상혁입니다.
         </h1>
         <p className="text-lg sm:text-xl text-gray-500 mb-10 leading-relaxed max-w-2xl mx-auto font-medium">
           Java 기반의 견고한 백엔드 시스템 구축 경험과 AI 기술 활용 능력을 겸비했습니다.

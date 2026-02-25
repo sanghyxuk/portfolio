@@ -25,7 +25,8 @@ export const projectData = [
     tech: ["Java 11", "Python 3.12.10", "FastAPI", "React"],
     description: "URL 분석 AI를 활용한 스미싱 방지 크롬 확장 프로그램입니다. 악성 URL을 판별하는 AI 모델과 빠르고 안정적인 FastAPI 백엔드 서버를 구축했습니다.",
     github: "https://github.com/Sanghyuk/peace-cat",
-    link: "#"
+    link: "#",
+    image: "/images/peace-cat.png" // 👈 경로가 이렇게 들어가야 합니다. (이름은 상혁님 파일명에 맞게 수정!)
   },
   {
     id: "ai-competition",
