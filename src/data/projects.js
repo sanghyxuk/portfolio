@@ -26,7 +26,13 @@ export const projectData = [
     description: "URL 분석 AI를 활용한 스미싱 방지 크롬 확장 프로그램입니다. 악성 URL을 판별하는 AI 모델과 빠르고 안정적인 FastAPI 백엔드 서버를 구축했습니다.",
     github: "https://github.com/Sanghyuk/peace-cat",
     link: "#",
-    image: "/images/peace-cat.png" // 👈 경로가 이렇게 들어가야 합니다. (이름은 상혁님 파일명에 맞게 수정!)
+    image: "/images/peace-cat.png", // 👈 이건 메인 카드에 보이는 대표 썸네일 1장
+    
+    // 👇 상세 페이지에 보여줄 추가 사진들 (여러 장 가능!)
+    detailImages: [
+      "/images/peace-cat-detail1.png",
+      "/images/peace-cat-detail2.png"
+    ] 
   },
   {
     id: "ai-competition",
@@ -34,7 +40,8 @@ export const projectData = [
     tech: ["Java 11", "AI", "Data Analysis"],
     description: "경찰청이 후원하고 데이터 유니버스가 주관한 경진대회 프로젝트입니다. 사회적 문제를 해결하는 AI 서비스를 기획 및 개발했습니다.",
     github: "https://github.com/Sanghyuk/ai-competition",
-    link: "#"
+    link: "#",
+    image: "/images/ai-competition.png" // 👈 두 번째 프로젝트 사진 이름 (실제 파일명으로 수정!)
   },
   {
     id: "kids-log",
@@ -42,6 +49,7 @@ export const projectData = [
     tech: ["Java 11", "Prompt Engineering"],
     description: "만 4~5세 유아들의 행동 발달 특성을 기반으로, 교육 현장의 관찰 일지 작성을 자동화하고 돕는 업무 보조 시스템입니다.",
     github: "https://github.com/Sanghyuk/kids-log",
-    link: "#"
+    link: "#",
+    image: "/images/kids-log.png" // 👈 세 번째 프로젝트 사진 이름 (실제 파일명으로 수정!)
   }
 ];
