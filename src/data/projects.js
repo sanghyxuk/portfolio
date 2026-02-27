@@ -11,7 +11,7 @@ export const historyData = [
   },
   {
     date: "2024.06",
-    event: "수원대학교 지능형 SW융합대학 아이디어 공모전 장려상", // [cite: 43, 47]
+    event: "수원대학교 지능형 SW융합대학 아이디어 공모전 수상", // [cite: 43, 47]
     role: "수원대학교 ICT학장 수여" // [cite: 56]
   },
   {
