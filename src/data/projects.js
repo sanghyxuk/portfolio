@@ -29,8 +29,15 @@ export const projectData = [
     description: "지능형 안드로이드 통합 보안 애플리케이션입니다. 악성코드/스팸 피싱 탐지 및 챗봇 AI 모델을 구축하고 MSA 지향 API 서버를 개발했습니다.", // [cite: 86, 92, 93, 94, 126]
     github: "https://github.com/sanghyxuk", // 
     link: "#",
-    image: "/images/phantom.png", // 👈 public/images 폴더에 실제 캡처본을 넣고 이름을 맞춰주세요!
-    detailImages: [] 
+    image: "/images/phantom.png",
+    video: "/videos/phantom-video.mp4",
+    detailImages: [
+      "/images/phantom-detail1.png",
+      "/images/phantom-detail2.png",
+      "/images/phantom-detail3.png",
+      "/images/phantom-detail4.png",
+      "/images/phantom-detail5.png"
+    ] 
   },
   {
     id: "purgo",
@@ -40,7 +47,19 @@ export const projectData = [
     github: "https://github.com/sanghyxuk", // 
     link: "#",
     image: "/images/purgo.png",
-    detailImages: []
+    video: "/videos/purgo-video.mp4",
+    detailImages: [
+      "/images/purgo-detail1.png",
+      "/images/purgo-detail2.png",
+      "/images/purgo-detail3.png",
+      "/images/purgo-detail4.png",
+      "/images/purgo-detail5.png",
+      "/images/purgo-detail6.png",
+      "/images/purgo-detail7.png",
+      "/images/purgo-detail8.png",
+      "/images/purgo-detail9.png",
+      "/images/purgo-detail10.png",
+    ]
   },
   {
     id: "shield-hub",
@@ -50,17 +69,20 @@ export const projectData = [
     github: "https://github.com/sanghyxuk", // 
     link: "https://frontend-chi-lake-23.vercel.app/", // [cite: 571]
     image: "/images/shield-hub.png",
-    detailImages: []
-  },
-  {
-    id: "chair-man",
-    title: "체어맨 (CHAIR MAN)", // [cite: 716]
-    tech: ["Android", "Spring Boot", "MySQL", "Cafe24"], // [cite: 804, 808, 817, 819]
-    description: "전국 휠체어 대여 서비스 앱입니다. 원터치 대여 및 예약 시스템을 구축하고 DBA 및 백엔드 개발을 담당했습니다.", // [cite: 717, 722, 725]
-    github: "https://github.com/sanghyxuk", // 
-    link: "http://www.chairman123.com", // [cite: 739]
-    image: "/images/chair-man.png",
-    detailImages: []
+    video: "/videos/shield-hub-video.mp4",
+    detailImages: [
+      "/images/shield-hub-detail1.png",
+      "/images/shield-hub-detail2.png",
+      "/images/shield-hub-detail3.png",
+      "/images/shield-hub-detail4.png",
+      "/images/shield-hub-detail5.png",
+      "/images/shield-hub-detail6.png",
+      "/images/shield-hub-detail7.png",
+      "/images/shield-hub-detail8.png",
+      "/images/shield-hub-detail9.png",
+      "/images/shield-hub-detail10.png",
+      "/images/shield-hub-detail11.png",
+    ]
   },
   {
     id: "peace-cat",
@@ -69,12 +91,17 @@ export const projectData = [
     description: "URL 분석 AI를 활용한 스미싱 방지 크롬 확장 프로그램입니다. 악성 URL을 판별하는 AI 모델과 빠르고 안정적인 FastAPI 백엔드 서버를 구축했습니다.",
     github: "https://github.com/Sanghyuk/peace-cat",
     link: "#",
-    image: "/images/peace-cat.png", // 👈 이건 메인 카드에 보이는 대표 썸네일 1장
-    
-    // 👇 상세 페이지에 보여줄 추가 사진들 (여러 장 가능!)
+    image: "/images/peace-cat.png",
+    video: "/videos/peace-cat.mp4",
     detailImages: [
       "/images/peace-cat-detail1.png",
-      "/images/peace-cat-detail2.png"
+      "/images/peace-cat-detail2.png",
+      "/images/peace-cat-detail3.png",
+      "/images/peace-cat-detail4.png",
+      "/images/peace-cat-detail5.png",
+      "/images/peace-cat-detail6.png",
+      "/images/peace-cat-detail7.png",
+      "/images/peace-cat-detail8.png"
     ] 
   }
 ];

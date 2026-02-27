@@ -1,4 +1,4 @@
-import { useState } from "react"; // 👈 상태 관리를 위해 추가
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { projectData } from "../data/projects";
 
@@ -6,7 +6,6 @@ function ProjectDetail() {
   const { id } = useParams(); 
   const project = projectData.find(p => p.id === id);
   
-  // 🔍 현재 클릭해서 확대할 이미지 주소를 저장하는 상태 (아무것도 안 눌렀을 땐 null)
   const [selectedImage, setSelectedImage] = useState(null);
 
   if (!project) {
@@ -38,19 +37,18 @@ function ProjectDetail() {
           </div>
         </div>
 
-        {/* 📸 대표 사진 (여기도 클릭하면 커지도록 추가했습니다) */}
-        {(project.image || project.video) && (
-          <div className="mb-12 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
-            {project.video ? (
-              <video src={project.video} autoPlay loop muted playsInline className="w-full h-auto object-cover" />
-            ) : (
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-auto object-cover cursor-zoom-in hover:opacity-90 transition-opacity" 
-                onClick={() => setSelectedImage(project.image)} // 클릭 시 이미지 주소 저장
-              />
-            )}
+        {/* 🎬 시연 동영상 (영상이 있는 경우 최상단에 나타남) */}
+        {project.video && (
+          <div className="mb-12 rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-black">
+            <video 
+              src={project.video} 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              controls 
+              className="w-full h-auto object-contain max-h-[600px]" 
+            />
           </div>
         )}
 
@@ -60,7 +58,7 @@ function ProjectDetail() {
           <p className="mb-10">{project.description}</p>
         </div>
 
-        {/* 🖼️ 추가 스크린샷 갤러리 */}
+        {/* 🖼️ 상세페이지 사진 갤러리 */}
         {project.detailImages && project.detailImages.length > 0 && (
           <div className="mt-12">
             <h3 className="text-2xl font-bold text-black mb-6 border-b border-gray-200 pb-2">기능 상세 스크린샷</h3>
@@ -71,7 +69,7 @@ function ProjectDetail() {
                   src={imgUrl} 
                   alt={`${project.title} 스크린샷 ${index + 1}`} 
                   className="w-full h-auto rounded-xl border border-gray-200 shadow-sm hover:shadow-md cursor-zoom-in hover:-translate-y-1 transition-all duration-300"
-                  onClick={() => setSelectedImage(imgUrl)} // 클릭 시 이미지 주소 저장
+                  onClick={() => setSelectedImage(imgUrl)}
                 />
               ))}
             </div>
@@ -91,21 +89,18 @@ function ProjectDetail() {
         </div>
       </section>
 
-      {/* 🔍 이미지 확대 모달 (selectedImage에 값이 있을 때만 화면에 나타남) */}
+      {/* 🔍 이미지 확대 모달 */}
       {selectedImage && (
         <div 
           className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 sm:p-8 cursor-zoom-out backdrop-blur-sm transition-opacity"
-          onClick={() => setSelectedImage(null)} // 검은 배경이나 사진을 누르면 다시 null로 만들어서 창을 닫음
+          onClick={() => setSelectedImage(null)}
         >
-          {/* 우측 상단 X 버튼 */}
           <button 
             className="absolute top-6 right-8 text-white text-4xl font-light hover:text-gray-300 transition-colors"
             onClick={() => setSelectedImage(null)}
           >
             &times;
           </button>
-          
-          {/* 확대된 이미지 */}
           <img 
             src={selectedImage} 
             alt="확대된 스크린샷" 
